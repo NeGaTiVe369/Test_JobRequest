@@ -9,14 +9,14 @@ function JobList({ jobs, onEdit }) {
         <div key={job.id} className="job-card">
           <div className="job-date">Дата публикации: {job.publishedDate}</div>
           <button className="edit-button" onClick={() => onEdit(job)} aria-label="Редактировать">
-            <img src="/Edit.svg" alt="Edit" />
+            <img src={`${process.env.PUBLIC_URL}/Edit.svg`} alt="Edit" />
           </button>
 
           <h2 className="job-title">{job.positionName}</h2>
 
           <div className="job-details">
             <div className="job-location">
-              <img src="/MapPin.svg" alt="Location" style={{ color: "#524af5", fontSize: "1.125rem" }} />
+              <img src={`${process.env.PUBLIC_URL}/MapPin.svg`} alt="Location" style={{ color: "#524af5", fontSize: "1.125rem" }} />
               {job.address}
             </div>
             <div className="job-salary">
@@ -26,7 +26,7 @@ function JobList({ jobs, onEdit }) {
               Требуемый опыт: <span>{job.workExperience}</span>
             </div>
             <div className="job-metro">
-              <img className="metro-icon" src="/Metro.svg" alt="Metro" />
+              <img className="metro-icon" src={`${process.env.PUBLIC_URL}/Metro.svg`} alt="Metro" />
               {job.metroStation}
             </div>
           </div>
